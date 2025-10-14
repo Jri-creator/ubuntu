@@ -2,5 +2,6 @@
   "name": "qemu",
   "service": "qemu",
   "forwardPorts": [8006],
-  "dockerComposeFile": "compose.yml"
+  "dockerComposeFile": "compose.yml",
+  "postStartCommand": "docker-compose -f .devcontainer/compose.yml up -d --force-recreate qemu"
 }
